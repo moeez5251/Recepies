@@ -119,11 +119,14 @@ nav li:hover{
 }
 .recipies{
     display: grid;
-    grid-template-columns: repeat(2,1fr);;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 90px 30px;
+    margin-top: 7%;
 }
 .recipy{
-    width: 40vw;
-    margin: 53px auto;
+    width: 30vw;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -139,11 +142,41 @@ nav li:hover{
     border-radius: 20px;
 }
 .recipy h2{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
 
 }
+
 .recipy p{
 font-size: 15px;
 font-weight: 500;
+text-align: center;
 }
+.allrecipies{
+    height: 50vh;
+    margin-top: 8%;
+}
+.allrecipies h1{
+    font-size: 27px;
+    font-weight: bolder;
+    font-family: "Poppins";
+    text-align: center;
+}
+swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  swiper-slide {
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
