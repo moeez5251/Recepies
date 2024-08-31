@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", system-ui;
+    font-weight: 400;
+}
+
+.head {
+    display: flex;
+    margin: 10px 30px;
+    gap: 40px;
+}
+
+.image {
+    width: 43vw;
+    height: 23vw;
+    overflow: hidden;
+}
+
+.image img {
+    width: 500px;
+    object-fit: cover;
+    height: 300px;
+}
+
+.other {
+    width: 56vw;
+}
+
+.other h2 {
+    font-weight: 600;
+    font-size: 30px;
+    background-color: #ffe800;
+    padding: 6px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.other_info {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.info {
+    border-left: 2px solid black;
+    padding: 0px 10px;
+}
+
+.description {
+    margin: 8px;
+    font-size: 14px;
+}
+
+.ingredients,.ratings {
+    background-color: #ede9dd;
+    height: 70vh;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.ingredient {
+    padding: 10px 20px;
+}
+
+.ingredient h2,.nutritions h2 ,.instructions h2,.userrating h2{
+    font-weight: 600;
+    font-size: 28px;
+    background-color: #ffe800;
+    padding: 10px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.ingredient ul,.nutritions ul,.instructions ul {
+    height: 40vh;
+    margin: 9px 21px;
+    overflow-y: auto;
+    width: 42vw;
+}
+
+.items-ingredient li,.item-nutritions li,.item-instruction li {
+    position: relative;
+    font-size: 17px;
+    margin: 5px 6px;
+}
+
+.nutritions,.userrating{
+    width: 45vw;
+    margin: 10px 20px;
+    background-color: white;
+}
+.nutritions h2,.userrating h2{
+    margin: 4px 10px;
+    text-align: center;
+}
+.instructions{
+    margin: 10px;
+    position: relative;
+    width: 47vw;
+}
+.video{
+    width: 88%;
+    height: 304px;
+    margin: 13px auto;
+}
+.userrating video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 13px;
+
+}
+.user{
+    position: absolute;
+    bottom: 11px;
+    display: flex;
+    gap: 16rem;
+    left: 20%;
+
+}
+.positive,.negative{
+    font-size: 16px;
+}
+.items-nutritions li{
+    font-weight: 600;
+}
