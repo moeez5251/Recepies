@@ -10,8 +10,8 @@
 
 <body>
     <nav>
-        <li>Recepies</li>
-        <li>Contact Us</li>
+        <li ><a href="#recepies">Recepies</a></li>
+        <li><a href="#contact">Contact Us</a></li>
     </nav>
     <div class="main">
 
@@ -38,7 +38,7 @@
             <p>Cooking Tips</p>
         </div>
     </section>
-    <section class="highlights">
+    <section class="highlights" >
         <h1>Latest Recipe Highlights</h1>
         <div class="recipies">
 
@@ -82,7 +82,7 @@
         </div>
     </section>
 
-    <section class="allrecipies">
+    <section class="allrecipies" id="recepies">
         <h1>Recommended Recepies</h1>
         <swiper-container class="mySwiper" loop="true" autoplay-delay="2000" effect="coverflow" centered-slides="true"
             slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0"
@@ -96,10 +96,57 @@
             </div>
 
         </swiper-container>
-
-
-
     </section>
+    <section class="join">
+        <h2>Join the Flavour Revolution Today!</h2>
+        <input type="email" name="Email" id="mail" placeholder="test@email.com" autocomplete="off">
+        <button class="btn">Subscribe for Tasty Updates</button>
+    </section>
+    <section class="logos">
+        <h2>Join Our Flavour Adventure!</h2>
+        <div class="logo">
+
+            <div class="img">
+                <img width="35" src="assets/SVG/facebook.svg" alt="">
+            </div>
+            <div class="img">
+                <img width="35" src="assets/SVG/twitter.svg" alt="">
+            </div>
+            <div class="img">
+                <img width="35" src="assets/SVG/instgram.svg" alt="">
+            </div>
+            <div class="img">
+                <img width="35" src="assets/SVG/tiktok.svg" alt="">
+            </div>
+            <div class="img">
+                <img width="35" src="assets/SVG/whatsapp.svg" alt="">
+            </div>
+        </div>
+    </section>
+    <div class="form">
+        <h2>Get in Touch</h2>
+        <form action="#">
+            <input type="text" name="text" placeholder="Name" autocomplete="off">
+            <input type="email" name="Email" placeholder="Email" autocomplete="off">
+            <input type="number" name="number" placeholder="Phone" autocomplete="off">
+            <textarea name="area" id="area" cols=15" rows="10" placeholder="Type Your message..." autocomplete="off"></textarea>
+            <button type="submit">Send It</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="header">
+            <div class="name">
+                <div>Recepies</div>
+                <div>Blog</div>
+            </div>
+            <div class="name">
+                <div>About</div>
+                <div id="contact">Contact</div>
+            </div>
+        </div>
+        <p>&copy; 2024 Foodie Heaven. All rights reserved</p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,7 +9,10 @@
     font-weight: 400;
     font-style: normal;
 }
-nav{
+html{
+    scroll-behavior: smooth;
+}
+nav {
     display: flex;
     list-style: none;
     align-items: center;
@@ -26,33 +30,41 @@ nav{
     z-index: 1;
 
 }
-nav li{
+
+nav li a{
     padding: 10px;
     cursor: pointer;
     font-weight: 600;
     font-size: 18px;
+    text-decoration: none;
+    color: black;
 }
-nav li:hover{
+
+nav li:hover {
     background-color: white;
     transform: scale(1.07);
     border-radius: 50px;
 }
-.main{
+
+.main {
     height: 105vh;
 }
-.video{
+
+.video {
     width: 100vw;
     position: absolute;
     z-index: -100;
     right: 0;
     filter: brightness(0.3);
 }
-.video video{
+
+.video video {
     width: 100%;
     height: 105vh;
     object-fit: cover;
 }
-.content{
+
+.content {
     position: relative;
     top: 35%;
     left: 30%;
@@ -63,19 +75,22 @@ nav li:hover{
     gap: 39px;
 }
 
-.content> *{
+.content>* {
     margin: 0px 20px;
 }
-.content h1{
+
+.content h1 {
     color: burlywood;
     font-weight: bolder;
     font-size: 59px;
 }
-.content p{
+
+.content p {
     font-size: 24px;
     font-weight: 500;
 }
-.content button{
+
+.content button {
     width: fit-content;
     background: no-repeat;
     border: 2px solid white;
@@ -85,39 +100,45 @@ nav li:hover{
     font-size: 22px;
     cursor: pointer;
 }
-.count{
+
+.count {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 40vh;
 }
-.type{
+
+.type {
     display: flex;
     flex-direction: column;
 }
-.type{
+
+.type {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
 }
-.type span{
+
+.type span {
     color: #FFC300;
     font-size: 50px;
     font-weight: bolder;
 }
 
-.type p{
+.type p {
     font-size: 20px;
     font-weight: 600;
 }
-.highlights h1{
+
+.highlights h1 {
     font-family: "Poppins";
     font-weight: bolder;
     font-size: 35px;
     text-align: center;
 }
-.recipies{
+
+.recipies {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -125,48 +146,58 @@ nav li:hover{
     gap: 90px 30px;
     margin-top: 7%;
 }
-.recipy{
+
+.recipy {
     width: 30vw;
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
 }
-.recipy> *{
+
+.recipy>* {
     font-family: "Poppins";
 
 }
-.recipy img{
+
+.recipy img {
     width: 80%;
     object-fit: contain;
     border-radius: 20px;
 }
-.recipy h2{
+
+.recipy h2 {
+    text-wrap: pretty;
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
 
 }
 
-.recipy p{
-font-size: 15px;
-font-weight: 500;
-text-align: center;
+.recipy p {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
 }
-.allrecipies{
-    height: 100vh;
+
+.allrecipies {
+    height: 70vh;
     margin-top: 8%;
 }
-.allrecipies h1{
+
+.allrecipies h1 {
     font-size: 27px;
     font-weight: bolder;
     font-family: "Poppins";
     text-align: center;
 }
+
 swiper-container {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
-  }
+}
+
 .loading {
     --speed-of-animation: 0.9s;
     --gap: 6px;
@@ -181,53 +212,283 @@ swiper-container {
     width: 100%;
     gap: 6px;
     height: 100px;
-   }
-   
-   .loading span {
+}
+
+.loading span {
     width: 4px;
     height: 50px;
     background: var(--first-color);
     animation: scale var(--speed-of-animation) ease-in-out infinite;
-   }
-   
-   .loading span:nth-child(2) {
+}
+
+.loading span:nth-child(2) {
     background: var(--second-color);
     animation-delay: -0.8s;
-   }
-   
-   .loading span:nth-child(3) {
+}
+
+.loading span:nth-child(3) {
     background: var(--third-color);
     animation-delay: -0.7s;
-   }
-   
-   .loading span:nth-child(4) {
+}
+
+.loading span:nth-child(4) {
     background: var(--fourth-color);
     animation-delay: -0.6s;
-   }
-   
-   .loading span:nth-child(5) {
+}
+
+.loading span:nth-child(5) {
     background: var(--fifth-color);
     animation-delay: -0.5s;
-   }
-   
-   @keyframes scale {
-    0%, 40%, 100% {
-     transform: scaleY(0.05);
+}
+
+@keyframes scale {
+
+    0%,
+    40%,
+    100% {
+        transform: scaleY(0.05);
     }
-   
+
     20% {
-     transform: scaleY(1);
+        transform: scaleY(1);
     }
-   }
-  swiper-slide {
+}
+
+swiper-slide {
     width: 300px;
     height: 300px;
     cursor: pointer;
-  }
+}
 
-  swiper-slide img {
+swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: contain;
-  }
+}
+
+.join {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    background-color: #ff5b00;
+    height: 70vh;
+
+}
+
+.join>* {
+    font-family: "Poppins";
+
+}
+
+.join h2 {
+    color: white;
+    padding-top: 30px;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.join input {
+    border: none;
+    padding: 12px 26px;
+    font-size: 17px;
+    border-radius: 22px;
+    width: 32%;
+}
+
+.join input:focus {
+    outline: none;
+    border: none;
+}
+
+.join button {
+    border: none;
+    padding: 17px 23px;
+    background-color: yellow;
+    color: brown;
+    font-weight: bold;
+    border-radius: 30px;
+    width: 24%;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.logos {
+    height: 60vh;
+}
+
+.logos h2 {
+    font-family: "Poppins";
+    padding-top: 30px;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 41%;
+    margin: 3% auto;
+    justify-items: center;
+}
+
+.img {
+    background-color: lightgray;
+    width: fit-content;
+    padding: 16px 22px;
+    border-radius: 30px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 55px;
+    background-color: antiquewhite;
+    height: 105vh;
+}
+
+.form h2 {
+    font-family: "Poppins";
+    padding-top: 30px;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+form>* {
+    padding: 8px 19px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 17px;
+    border: 1px solid firebrick;
+}
+
+.form>* :focus {
+    outline: none;
+    border-color: #f6bb02;
+}
+
+.form button {
+    background-color: yellow;
+    border: none;
+    width:fit-content;
+    margin: auto;
+    padding: 12px;
+    font-size: 19px;
+    color: #a52a2a;
+    cursor: pointer;
+    text-wrap: nowrap;
+}
+
+footer {
+    background-color: black;
+    height: 20vh;
+    color: white;
+    font-size: 22px;
+    padding-top: 30px;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.name {
+    display: flex;
+    gap: 70px;
+}
+
+.name>* {
+    font-weight: 300;
+}
+
+#contact {
+    text-decoration: underline;
+}
+
+footer p {
+
+    font-size: 18px;
+    font-weight: 300;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-style: oblique;
+
+}
+@media screen and (max-width:700px) {
+    .join button{
+        width: 45%;
+    }
+    nav{
+        gap: 10px   ;
+    }
+    .recipies{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .recipy{
+        width: 50vw;
+    }
+    .join input{
+        width:80%
+    }
+    .join h2,.logos h2,.highlights h1  {
+    font-size: 24px;
+    text-align: center;
+    }
+    .logo{
+        margin-top: 8%;
+    }
+    footer{
+        padding-top: 10px;
+    }
+    .header{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+    .main,.video .video{
+        height: 120vh;
+    }
+    swiper-slide img {
+        width: 90%;
+        height: 90%;
+    }
+}
+@media screen and (max-width:460px) {
+    .count{
+    height: 62vh;
+    flex-direction: column;
+    gap: 20px;
+    }
+   .logo{
+    width: 100%;
+    margin: 8% 0px;
+   }
+   nav{
+    gap: 10px;
+        flex-direction: column;
+   }
+.content{
+    left: 17%;
+    top: 27%;
+}
+
+}

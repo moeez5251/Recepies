@@ -55,7 +55,8 @@
     font-size: 14px;
 }
 
-.ingredients,.ratings {
+.ingredients,
+.ratings {
     background-color: #ede9dd;
     height: 70vh;
     display: flex;
@@ -68,7 +69,10 @@
     padding: 10px 20px;
 }
 
-.ingredient h2,.nutritions h2 ,.instructions h2,.userrating h2{
+.ingredient h2,
+.nutritions h2,
+.instructions h2,
+.userrating h2 {
     font-weight: 600;
     font-size: 28px;
     background-color: #ffe800;
@@ -77,46 +81,57 @@
     text-align: center;
 }
 
-.ingredient ul,.nutritions ul,.instructions ul {
+.ingredient ul,
+.nutritions ul,
+.instructions ul {
     height: 40vh;
     margin: 9px 21px;
     overflow-y: auto;
     width: 42vw;
 }
 
-.items-ingredient li,.item-nutritions li,.item-instruction li {
+.items-ingredient li,
+.item-nutritions li,
+.item-instruction li {
     position: relative;
     font-size: 17px;
     margin: 5px 6px;
 }
 
-.nutritions,.userrating{
+.nutritions,
+.userrating {
     width: 45vw;
     margin: 10px 20px;
     background-color: white;
 }
-.nutritions h2,.userrating h2{
+
+.nutritions h2,
+.userrating h2 {
     margin: 4px 10px;
     text-align: center;
 }
-.instructions{
+
+.instructions {
     margin: 10px;
     position: relative;
     width: 47vw;
 }
-.video{
+
+.video {
     width: 88%;
     height: 304px;
     margin: 13px auto;
 }
-.userrating video{
+
+.userrating video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 13px;
 
 }
-.user{
+
+.user {
     position: absolute;
     bottom: 11px;
     display: flex;
@@ -124,9 +139,64 @@
     left: 20%;
 
 }
-.positive,.negative{
+
+.positive,
+.negative {
     font-size: 16px;
 }
-.items-nutritions li{
+
+.items-nutritions li {
     font-weight: 600;
+}
+
+@media screen and (max-width:850px) {
+    .image img {
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .ingredients,
+    .ratings {
+        height: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nutritions,
+    .userrating {
+        width: 100%;
+        text-align: center;
+    }
+
+    .ingredient,
+    .other,
+    .instructions {
+        width: 100%;
+    }
+
+    .head {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+    .user {
+        gap: 9rem;
+        left: 17%;
+        bottom: -37px;
+    }
+
+    .ingredient ul,
+    .nutritions ul,
+    .instructions ul {
+        height: auto;
+        width: 100%;
+        margin: 0;
+
+    }
+    .video{
+        height: 400px;
+    }
 }

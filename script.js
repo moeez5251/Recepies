@@ -1,3 +1,4 @@
+// Event Listners
 window.addEventListener("load", () => {
     document.querySelector("nav").style.marginTop = "22px";
     setTimeout(() => {
@@ -27,11 +28,15 @@ function scroll() {
     }
 }
 window.addEventListener("scroll", scroll)
+document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+})
+// API Fetching
 const url = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=under_30_minutes';
 const options = {
     method: 'GET',
     headers: {
-        'x-rapidapi-key': '544727a05dmshe7e455284bae3a8p1520c7jsne7ba47ff870b',
+        'x-rapidapi-key': '6d6aa59c4dmshfc74ddfe1996f31p1f894fjsn6af9acb4643a',
         'x-rapidapi-host': 'tasty.p.rapidapi.com'
     }
 };
@@ -45,19 +50,21 @@ async function main() {
         console.error(error);
     }
 }
-(async function recipes() {
-    let recipes = await main();
-    let swiper = document.querySelector("swiper-container ");
-    swiper.innerHTML = "";
-    for (const recipy of recipes) {
-        let newelement = document.createElement("swiper-slide");
-        newelement.innerHTML = `
+
+    // Function for api
+    (async function recipes() {
+        let recipes = await main();
+        let swiper = document.querySelector("swiper-container ");
+        swiper.innerHTML = "";
+        for (const recipy of recipes) {
+            let newelement = document.createElement("swiper-slide");
+            newelement.innerHTML = `
         <img src=${recipy.thumbnail_url} alt=${recipy.name}></img>
         `
-        swiper.appendChild(newelement);
-        newelement.addEventListener("click", (e) => {
-            const newWindow = window.open('', '_blank');
-            newWindow.document.write(`
+            swiper.appendChild(newelement);
+            newelement.addEventListener("click", (e) => {
+                const newWindow = window.open('', '_blank');
+                newWindow.document.write(`
             <!DOCTYPE html>
 <html lang="en">
 
@@ -100,14 +107,14 @@ async function main() {
             <h2>Ingredients</h2>
             <ul class="items-ingredient">
                ${recipy.sections[0].components.map(e => {
-                if (e.raw_text=="n/a") {
-                    return ""
-                }
-                else{
+                    if (e.raw_text == "n/a") {
+                        return ""
+                    }
+                    else {
 
-                    return `<li style="list-style:ethiopic-halehame">${e.raw_text}</li>`
-                }
-            }).join('')} 
+                        return `<li style="list-style:ethiopic-halehame">${e.raw_text}</li>`
+                    }
+                }).join('')} 
 
             </ul>
         </div>
@@ -115,11 +122,11 @@ async function main() {
             <h2>Nutritions</h2>
             <ul class="items-nutritions">
               ${Object.entries(recipy.nutrition).map(([key, value]) => {
-                if (key === 'updated_at') {
-                   return " "
-                }
-                return `<li>${key}: ${value}</li>`;
-            }).join('')}
+                    if (key === 'updated_at') {
+                        return " "
+                    }
+                    return `<li>${key}: ${value}</li>`;
+                }).join('')}
             </ul>
         </div>
     </section>
@@ -127,8 +134,8 @@ async function main() {
         <div class="instructions">
             <h2>Instructions</h2>
             <ul class="item-instruction">
-                ${recipy.instructions.map(e=>{
-                        return `<li style="list-style:ethiopic-halehame">${e.display_text}</li>`
+                ${recipy.instructions.map(e => {
+                    return `<li style="list-style:ethiopic-halehame">${e.display_text}</li>`
                 }).join("")}
             </ul>
             <div class="user">
@@ -155,8 +162,9 @@ async function main() {
 
 </html>
             `);
-            newWindow.document.close();
-        })
-    }
+                newWindow.document.close();
+            })
+        }
 
-})();
+    })();
+
