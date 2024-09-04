@@ -24,7 +24,7 @@ nav {
     margin-top: -102px;
     left: 33%;
     padding: 16px 0px;
-    border-radius: 50px;
+    border-radius: 30px;
     transition: all 0.5s;
     overflow: hidden;
     z-index: 1;
@@ -99,6 +99,7 @@ nav li:hover {
     border-radius: 25px;
     font-size: 22px;
     cursor: pointer;
+    text-wrap: nowrap;
 }
 
 .count {
@@ -434,7 +435,7 @@ footer p {
 }
 @media screen and (max-width:700px) {
     .join button{
-        width: 45%;
+        width: 80%;
     }
     nav{
         gap: 10px   ;
